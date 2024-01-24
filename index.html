@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Hunter B.🐛</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="profile-circle">
+            <img src="images/cacadordebugzoom.png" alt="Foto de Perfil" class="logo">
+        </div>
+        <h1>Bug Hunter B.🐛</h1>
+    </header>
+
+    <section>
+        <ul id="taskList"></ul>
+        <p></p>
+        <div class="addTaskContainer">
+            <input type="text" id="newTask" placeholder="Adicionar nova tarefa" onkeydown="handleKeyPress(event)">
+            <button onclick="addTask()">Adicionar</button>
+        </div>
+        <div class="taskActions">
+            <div class="actions">
+                <button onclick="deleteCompleted()">Remover Concluídas</button>
+                <span id="pendingTasksCount">0 tarefas pendentes</span>
+            </div>
+        </div>
+
+        <hr class="separator"> <!-- Linha de separação -->
+
+        <!-- Checkbox Test -->
+        <p>Selecione/desmarque a caixa para testar a funcionalidade do Checkbox.</p>
+        <label for="testCheckbox">Teste de Checkbox:</label>
+        <input type="checkbox" id="testCheckbox" onchange="handleCheckboxChange()">
+        <label for="testCheckbox">Teste de Checkbox:</label>
+        <input type="checkbox" id="testCheckbox" onchange="handleCheckboxChange()">
+
+        <hr class="separator"> <!-- Linha de separação -->
+
+        <!-- Radio Test -->
+        <p>Selecione um dos botões de opção para testar a funcionalidade do Radio.</p>
+        <label for="testRadio1">Teste de Radio 1:</label>
+        <input type="radio" id="testRadio1" name="radioGroup" onchange="handleRadioChange()">
+        <label for="testRadio2">Teste de Radio 2:</label>
+        <input type="radio" id="testRadio2" name="radioGroup" onchange="handleRadioChange()">
+
+        <hr class="separator"> <!-- Linha de separação -->
+
+        <!-- Select Test -->
+        <p>Escolha uma opção no menu suspenso para testar a funcionalidade do Select.</p>
+        <label for="testSelect">Teste de Seleção:</label>
+        <select id="testSelect" onchange="handleSelectChange()">
+            <option value="1ª [OK]">1ª Seleção</option>
+            <option value="2ª [OK]">2ª Seleção</option>
+            <option value="3ª [OK]">3ª Seleção</option>
+        </select>
+
+        <hr class="separator"> <!-- Linha de separação -->
+
+        <!-- Text Input Test -->
+        <p>Insira algum texto no campo para testar a funcionalidade da Entrada de Texto.</p>
+        <label for="testTextInput">Teste de Entrada de Texto:</label>
+        <input type="text" id="testTextInput" onchange="handleTextInputChange()">
+
+        <!-- Popup -->
+        <div id="overlay" onclick="closePopup()"></div>
+        <div id="popup"></div>
+    </section>
+
+    <footer>
+        &copy; 2024 bug.hunter.b🐛
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
